@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FIXML v="FIX.5.0SP2" r="test" xv="109" cv="CME.0001" xr="xrtest" s="2017-01-16+08:00">
+  <Order Acct="12345678" Side="5" Typ="2" Px="22" TmInForce="0">
+    <Instrmt Sym="F" SecTyp="CS"></Instrmt>
+    <OrdQty Qty="1"></OrdQty>
+  </Order>
+</FIXML>

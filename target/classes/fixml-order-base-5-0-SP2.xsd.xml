@@ -1,0 +1,26 @@
+<fix:FIXML v="FIX.5.0SP2" r="string" xv="3" cv="string" xr="string" s="2010-11-16" xmlns:fix="http://www.fixprotocol.org/FIXML-5-0-SP2">
+  <!--You have a CHOICE of the next 2 items at this level-->
+  <fix:Message>
+    <!--Optional:-->
+    <fix:Hdr MsgTyp="Q" ApplVerID="8" SID="string" TID="string" OBID="string" D2ID="string" SeqNum="201" SSub="string" SLoc="string" TSub="string" TLoc="string" OBSub="string" OBLoc="string" D2Sub="string" D2Loc="string" PosDup="N" PosRsnd="N" Snt="2004-02-15T02:44:14" OrigSnt="2018-11-01T13:36:46+08:00" MsgEncd="string">
+      <!--Zero or more repetitions:-->
+      <fix:Hop ID="string" Snt="2013-05-22T09:02:49+08:00" Ref="201"/>
+    </fix:Hdr>
+  </fix:Message>
+  <!--1 or more repetitions:-->
+  <fix:Batch ID="string" TotMsg="100">
+    <!--Optional:-->
+    <fix:Hdr MsgTyp="3" ApplVerID="2" SID="string" TID="string" OBID="string" D2ID="string" SeqNum="201" SSub="string" SLoc="string" TSub="string" TLoc="string" OBSub="string" OBLoc="string" D2Sub="string" D2Loc="string" PosDup="Y" PosRsnd="Y" Snt="2016-01-02T03:07:42" OrigSnt="2012-01-08T03:42:56" MsgEncd="string">
+      <!--Zero or more repetitions:-->
+      <fix:Hop ID="string" Snt="2014-10-27T17:44:59" Ref="201"/>
+    </fix:Hdr>
+    <!--Zero or more repetitions:-->
+    <fix:Message>
+      <!--Optional:-->
+      <fix:Hdr MsgTyp="y" ApplVerID="3" SID="string" TID="string" OBID="string" D2ID="string" SeqNum="201" SSub="string" SLoc="string" TSub="string" TLoc="string" OBSub="string" OBLoc="string" D2Sub="string" D2Loc="string" PosDup="N" PosRsnd="Y" Snt="2014-06-11T02:33:25+08:00" OrigSnt="2003-11-10T15:56:46+08:00" MsgEncd="string">
+        <!--Zero or more repetitions:-->
+        <fix:Hop ID="string" Snt="2000-09-25T14:18:09" Ref="201"/>
+      </fix:Hdr>
+    </fix:Message>
+  </fix:Batch>
+</fix:FIXML>
