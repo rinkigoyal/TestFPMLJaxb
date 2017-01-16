@@ -63,8 +63,7 @@
       <xs:attribute name="Method" type="TradSesMethod_t" use="optional"/>
       <xs:attribute name="Mode" type="TradSesMode_t" use="optional"/>
       <xs:attribute name="Unsol" type="UnsolicitedIndicator_t" use="optional"/>
-      <xs:attribute name="Stat" type="
-" use="required"/>
+      <xs:attribute name="Stat" type="TradSesStatus_t" use="required"/>
       <xs:attribute name="TradSesEvent" type="TradSesEvent_t" use="optional"/>
       <xs:attribute name="StatRejRsn" type="TradSesStatusRejReason_t" use="optional"/>
       <xs:attribute name="StartTm" type="TradSesStartTime_t" use="optional"/>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated:2013-12-09T16:55:41.991-05:00 Revision: FIXML Schema
+			Version FIX.5.0SP2 Copyright(c) FIX Protocol Limited. All rights
+			reserved. Comments and errors should be posted on the FIX protocol web-site
+			http://www.fixprotocol.org --><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           xmlns:fm="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.fixprotocol.org/FIXML-5-0-SP2/METADATA fixml-metadata-5-0-SP2.xsd"
+           targetNamespace="http://www.fixprotocol.org/FIXML-5-0-SP2"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:include schemaLocation="fixml-components-impl-5-0-SP2.xsd"/>
+	<xs:simpleType name="KxOrderTime_t">
+		<xs:annotation>
+			<xs:documentation>Specifies the start time of the time range on Order take place.</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxOrderTime" ComponentType="Field" Tag="2101"
+						 Type="UTCTimeOnly"
+						 AbbrName="StartTm"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="UTCTimeOnly"/>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="KxOrderStatusSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx Order Status </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxOrderStatusSym" ComponentType="Field" Tag="2103" Type="String"
+						 AbbrName="OrderStatusSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="KxCurrentActionSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx Current Action </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxCurrentActionSym" ComponentType="Field" Tag="2108" Type="String"
+						 AbbrName="KxCurrentActionSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="OrdTypeSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx OrdTypeSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="OrdTypeSym" ComponentType="Field" Tag="2109" Type="String"
+						 AbbrName="OrdTypeSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="SideSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx SideSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="SideSym" ComponentType="Field" Tag="2110" Type="String"
+						 AbbrName="SideSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ProductSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx ProductSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="ProductSym" ComponentType="Field" Tag="2111" Type="String"
+						 AbbrName="ProductSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="KxIdSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx IdSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="IdSym" ComponentType="Field" Tag="2112" Type="String"
+						 AbbrName="IdSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TmInForceSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx TmInForceSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="TmInForceSym" ComponentType="Field" Tag="2113" Type="String"
+						 AbbrName="TmInForceSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="OriginTrader_t">
+		<xs:annotation>
+			<xs:documentation>Kx OriginTrader </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="OriginTrader" ComponentType="Field" Tag="2114" Type="String"
+						 AbbrName="OriginTrader"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="KxTradingStatusSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx KxTradingStatus </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxTradingStatusym" ComponentType="Field" Tag="2116" Type="String"
+						 AbbrName="KxTradingStatusSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="KxRejectReasonSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx KxRejectReasonSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxRejectReasonSym" ComponentType="Field" Tag="2117" Type="String"
+						 AbbrName="KxRejectReasonSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="KxAccountIdSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx KxAccountIdSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxAccountIdSym" ComponentType="Field" Tag="2118" Type="String"
+						 AbbrName="KxAccountIdSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="KxAlgoIdSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx KxAlgoIdSym </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxAlgoIdSym" ComponentType="Field" Tag="2119" Type="String"
+						 AbbrName="KxAlgoIdSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="QtyGoal_t">
+		<xs:annotation>
+			<xs:documentation>Quantity (e.g. shares) bought/sold on this (last) fill.
+				(Prior to FIX 4.2 this field was of type int)</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="QtyGoal" ComponentType="Field" Tag="2120" Type="Qty"
+						 AbbrName="QtyGoal"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="Qty"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="KxQtyStatusSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx QtyStatus </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxQtyStatusSym" ComponentType="Field" Tag="2122" Type="String"
+						 AbbrName="KxQtyStatusSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TradeCount_t">
+		<xs:annotation>
+			<xs:documentation>Total number of trades</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="TradeCount" ComponentType="Field" Tag="2123" Type="int"
+						 AbbrName="TradeCount"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+	<xs:simpleType name="KxTrdTimeLast_t">
+		<xs:annotation>
+			<xs:documentation>Specifies the start time of the time range on Order take place.</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="TrdTimeLast" ComponentType="Field" Tag="2124"
+						 Type="UTCTimeOnly"
+						 AbbrName="TrdTimeLast"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="UTCTimeOnly"/>
+	</xs:simpleType>
+	<xs:simpleType name="ValFl_t">
+		<xs:annotation>
+			<xs:documentation>Quantity (e.g. shares) </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="ValFl" ComponentType="Field" Tag="2125" Type="float"
+						 AbbrName="ValFl"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="ValDec_t">
+		<xs:annotation>
+			<xs:documentation>Total number of trades</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="ValDec" ComponentType="Field" Tag="2126" Type="int"
+						 AbbrName="ValDec"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+	<xs:simpleType name="ValFmt_t">
+		<xs:annotation>
+			<xs:documentation>Total number of trades</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="ValFmt" ComponentType="Field" Tag="2127" Type="int"
+						 AbbrName="ValFmt"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+	<xs:simpleType name="ValTick_t">
+		<xs:annotation>
+			<xs:documentation>For Fixed Income</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="ValTick" ComponentType="Field" Tag="2128" Type="float"
+						 AbbrName="ValTick"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="KxValueTypeSym_t">
+		<xs:annotation>
+			<xs:documentation>Kx Current Action </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxValueTypeSym" ComponentType="Field" Tag="2130" Type="String"
+						 AbbrName="KxValueTypeSym"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+
+
+	<xs:simpleType name="MarketStatus_t">
+		<xs:annotation>
+			<xs:documentation>Kx Market Status </xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="MarketStatus" ComponentType="Field" Tag="2106" Type="String"
+						 AbbrName="MarketStatus"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="KxOrderStatus_enum_t">
+		<xs:annotation>
+			<xs:documentation>Kx Order Status Enum</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxOrderStatusEnum" ComponentType="Field" Tag="2102" Type="char"
+						 AbbrName="KxOrderStatus"/>
+			</xs:appinfo>
+			<xs:appinfo>
+				<fm:EnumDoc value="B">Buy</fm:EnumDoc>
+				<fm:EnumDoc value="S">Sell</fm:EnumDoc>
+				<fm:EnumDoc value="T">Trade</fm:EnumDoc>
+				<fm:EnumDoc value="X">Cross</fm:EnumDoc>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="char">
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="X"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="KxCurrentAction_enum_t">
+		<xs:annotation>
+			<xs:documentation>Kx Current Action Enum</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxCurrentActionEnum" ComponentType="Field" Tag="2107" Type="char"
+						 AbbrName="KxCurrentAction"/>
+			</xs:appinfo>
+			<xs:appinfo>
+				<fm:EnumDoc value="B">Buy</fm:EnumDoc>
+				<fm:EnumDoc value="S">Sell</fm:EnumDoc>
+				<fm:EnumDoc value="T">Trade</fm:EnumDoc>
+				<fm:EnumDoc value="X">Cross</fm:EnumDoc>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="char">
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="X"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="KxOrderActive_enum_t">
+		<xs:annotation>
+			<xs:documentation>Identifies reason for rejection.</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxOrderActive" ComponentType="Field" Tag="2104" Type="int"
+						 AbbrName="KxOrderActive"/>
+			</xs:appinfo>
+			<xs:appinfo>
+				<fm:EnumDoc value="0">false</fm:EnumDoc>
+				<fm:EnumDoc value="1">true</fm:EnumDoc>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="KxOrderCompleted_enum_t">
+		<xs:annotation>
+			<xs:documentation>Identifies reason for rejection.</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxOrderCompleted" ComponentType="Field" Tag="2105" Type="int"
+						 AbbrName="KxOrderCompleted"/>
+			</xs:appinfo>
+			<xs:appinfo>
+				<fm:EnumDoc value="0">false</fm:EnumDoc>
+				<fm:EnumDoc value="1">true</fm:EnumDoc>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="KxTradingStatus_enum_t">
+		<xs:annotation>
+			<xs:documentation>Identifies reason for KxTradingStatus.</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxTradingStatus" ComponentType="Field" Tag="2115" Type="int"
+						 AbbrName="KxTradingStatus"/>
+			</xs:appinfo>
+			<xs:appinfo>
+				<fm:EnumDoc value="0">false</fm:EnumDoc>
+				<fm:EnumDoc value="1">true</fm:EnumDoc>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="KxQtyStatus_enum_t">
+		<xs:annotation>
+			<xs:documentation>Kx KxQtyStatus Enum</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxQtyStatusEnum" ComponentType="Field" Tag="2121" Type="char"
+						 AbbrName="KxQtyStatus"/>
+			</xs:appinfo>
+			<xs:appinfo>
+				<fm:EnumDoc value="B">Buy</fm:EnumDoc>
+				<fm:EnumDoc value="S">Sell</fm:EnumDoc>
+				<fm:EnumDoc value="T">Trade</fm:EnumDoc>
+				<fm:EnumDoc value="X">Cross</fm:EnumDoc>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="char">
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="X"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="KxValueType_enum_t">
+		<xs:annotation>
+			<xs:documentation>Kx ValueType Enum</xs:documentation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxValueTypeEnum" ComponentType="Field" Tag="2129" Type="char"
+						 AbbrName="KxValueType"/>
+			</xs:appinfo>
+			<xs:appinfo>
+				<fm:EnumDoc value="B">Buy</fm:EnumDoc>
+				<fm:EnumDoc value="S">Sell</fm:EnumDoc>
+				<fm:EnumDoc value="T">Trade</fm:EnumDoc>
+				<fm:EnumDoc value="X">Cross</fm:EnumDoc>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="char">
+			<xs:enumeration value="B"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="X"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+
+
+
+	<!-- to be defined in fixml -->
+	<xs:attributeGroup name="KxOrderCustomData1Attributes">
+		<xs:attribute name="OrderTime" type="KxOrderTime_t" use="required"/>
+		<xs:attribute name="KxOrderStatus" type="KxOrderStatus_enum_t" use="required"/>
+		<xs:attribute name="KxOrderStatusSym" type="KxOrderStatusSym_t" use="required"/>
+		<xs:attribute name="KxOrderActive" type="KxOrderActive_enum_t" use="required"/>
+		<xs:attribute name="KxOrderCompleted" type="KxOrderCompleted_enum_t" use="required"/>
+		<xs:attribute name="CurrentAction" type="KxCurrentAction_enum_t" use="required"/>
+		<xs:attribute name="CurrentActionSym" type="KxCurrentActionSym_t" use="required"/>
+		<xs:attribute name="KxId" type="KxIdSym_t" use="required"/>
+		<xs:attribute name="TradingStatus" type="KxTradingStatus_enum_t" use="required"/>
+		<xs:attribute name="TradingStatusSym" type="KxTradingStatusSym_t" use="required"/>
+		<xs:attribute name="RejectReasonSym" type="KxRejectReasonSym_t" use="required"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="KxOrderCustomData2Attributes">
+		<xs:attribute name="AccountId" type="KxAccountIdSym_t" use="required"/>
+		<xs:attribute name="AlgoId" type="KxAlgoIdSym_t" use="required"/>
+		<xs:attribute name="QtyStatus" type="KxQtyStatus_enum_t" use="required"/>
+		<xs:attribute name="QtyStatusSym" type="KxQtyStatusSym_t" use="required"/>
+		<xs:attribute name="TrdTimeLast" type="KxTrdTimeLast_t" use="required"/>
+		<xs:attribute name="ValueType" type="KxValueType_enum_t" use="required"/>
+		<xs:attribute name="ValueTypeSym" type="KxValueTypeSym_t" use="required"/>
+
+	</xs:attributeGroup>
+
+	<xs:complexType name="KxOrderCustomData1_Block_t">
+		<xs:annotation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxOrderCustomData1" ComponentType="Block" Category="Common"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attributeGroup ref="KxOrderCustomData1Attributes"/>
+	</xs:complexType>
+
+	<xs:complexType name="KxOrderCustomData2_Block_t">
+		<xs:annotation>
+			<xs:appinfo>
+				<fm:Xref Protocol="FIX" name="KxOrderCustomData2" ComponentType="Block" Category="Common"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attributeGroup ref="KxOrderCustomData2Attributes"/>
+	</xs:complexType>
+
+
+   <xs:group name="EBondKxOrderElements">
+         <xs:sequence>
+	       <xs:element name="KxOrderCustomData1" type="KxOrderCustomData1_Block_t" minOccurs="1" maxOccurs="1" />
+	       <xs:element name="KxOrderCustomData2" type="KxOrderCustomData2_Block_t" minOccurs="1" maxOccurs="1" />
+	 </xs:sequence>
+   </xs:group>
+   <xs:attributeGroup name="EBondKxOrderAttributes">
+   	   	<xs:attribute name="Sym" type="Symbol_t" use="required"/>
+	   	<xs:attribute name="TxnTm" type="TransactTime_t" use="required"/>
+	      	<xs:attribute name="ExpireDt" type="ExpireDate_t" use="required"/>
+	      	<xs:attribute name="Src" type="TrdRegTimestampOrigin_t" use="required"/>
+	      	<xs:attribute name="MarketStatus" type="MarketStatus_t" use="required"/>
+	      	<xs:attribute name="Typ" type="OrdType_t" use="required"/>
+	      	<xs:attribute name="TypStr" type="OrdTypeSym_t" use="required"/>
+	      	<xs:attribute name="Side" type="Side_t" use="required"/>
+	      	<xs:attribute name="SideSym" type="SideSym_t" use="required"/>
+	      	<xs:attribute name="ProductSym" type="ProductSym_t" use="required"/>
+	      	<xs:attribute name="ID" type="SecurityID_t" use="required"/> <!-- TODO change to SecId and see if works fine -->
+	     	<xs:attribute name="Desc" type="SecurityDesc_t" use="required"/>
+	      	<xs:attribute name="Ccy" type="Currency_t" use="required"/>
+		<xs:attribute name="TmInForce" type="TimeInForce_t" use="required"/>
+	   	<xs:attribute name="TmInForceSym" type="TmInForceSym_t" use="required"/>
+	   	<xs:attribute name="OriginTrader" type="OriginTrader_t" use="required"/>
+	     	<xs:attribute name="Acct" type="Account_t" use="required"/>
+	 	<xs:attribute name="SID" type="SenderCompID_t" use="required"/>
+	   	<xs:attribute name="SSub" type="SenderSubID_t" use="required"/>
+	 	<xs:attribute name="ClOrdID" type="ClOrdID_t" use="required"/>
+	   	<xs:attribute name="ClOrdID2" type="SecondaryClOrdID_t" use="required"/>
+	 	<xs:attribute name="ClOrdLinkID" type="ClOrdLinkID_t" use="required"/>
+	   	<xs:attribute name="Px" type="Price_t" use="required"/>
+	   	<xs:attribute name="LastQty" type="LastQty_t" use="required"/>
+	   	<xs:attribute name="QtyGoal" type="QtyGoal_t" use="required"/>
+		<xs:attribute name="MaxShow" type="MaxShow_t" use="required"/>
+	   	<xs:attribute name="MinQty" type="MinQty_t" use="required"/>
+	   	<xs:attribute name="Qty" type="OrderQty_t" use="required"/>
+	   	<xs:attribute name="TradeCount" type="TradeCount_t" use="required"/>
+		<xs:attribute name="TrdDt" type="TradeDate_t" use="required"/>
+	   	<xs:attribute name="UndLastQty" type="UnderlyingLastQty_t" use="required"/>
+	   	<xs:attribute name="AvgPx" type="AvgPx_t" use="required"/>
+	   	<xs:attribute name="LastPx" type="LastPx_t" use="required"/>
+	   	<xs:attribute name="ValFl" type="ValFl_t" use="required"/>
+	   	<xs:attribute name="ValDec" type="ValDec_t" use="required"/>
+	   	<xs:attribute name="ValFmt" type="ValFmt_t" use="required"/>
+	   	<xs:attribute name="ValTick" type="ValTick_t" use="required"/>
+	      	<xs:attribute name="CumQty" type="CumQty_t" use="required"/>
+		<xs:attribute name="MMY" type="MaturityMonthYear_t" use="required"/>
+   	</xs:attributeGroup>
+   
+   
+   <xs:complexType name="EBondKxOrder_message_t" final="#all">
+      <xs:annotation>
+         <xs:documentation xml:lang="en">Custom FPML representation of KxOrder table</xs:documentation>
+         <xs:appinfo>
+            <fm:Xref Protocol="FIX" name="EBondKxOrder" ComponentType="Message" MsgID="AA"
+                     Section="PreTrade"
+                     Category="QuotationNegotiation"/>
+         </xs:appinfo>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="Abstract_message_t">
+            <xs:sequence>
+               <xs:group ref="EBondKxOrderElements"/>
+            </xs:sequence>
+            <xs:attributeGroup ref="EBondKxOrderAttributes"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   
+   <xs:element name="EbondKxOrderMsg" type="EBondKxOrder_message_t"
+               substitutionGroup="Message"
+               final="#all"/>
+</xs:schema>
